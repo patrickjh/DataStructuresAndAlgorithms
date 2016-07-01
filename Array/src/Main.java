@@ -9,6 +9,18 @@ class Array
 		nElems = 0;
 	}
 
+	public void  getMax()
+	{
+		long highest = -1;
+		int j;
+		for(j=0; j<nElems; j++)
+			if (a[j] > highest)
+				highest = a[j];
+
+		System.out.println("The max is " + highest);
+
+	}
+
 	public boolean find(long searchKey)
 	{
 		int j;
@@ -59,6 +71,8 @@ public class Main
 		Array arr;
 		arr = new Array(maxSize);
 
+		arr.getMax();
+
 		arr.insert(77);
 		arr.insert(99);
 		arr.insert(44);
@@ -71,6 +85,8 @@ public class Main
 		arr.insert(33);
 		
 		arr.display();
+
+		arr.getMax();
 
 		int searchKey = 35;
 		if(arr.find(searchKey))
