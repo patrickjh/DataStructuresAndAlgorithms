@@ -9,7 +9,7 @@ class Array
 		nElems = 0;
 	}
 
-	public void  getMax()
+	public long getMax()
 	{
 		long highest = -1;
 		int j;
@@ -17,8 +17,27 @@ class Array
 			if (a[j] > highest)
 				highest = a[j];
 
-		System.out.println("The max is " + highest);
+		return highest;
 
+	}
+	
+	public long removeMax(){
+		long highest = -1;
+		int j;
+		for(j=0; j<nElems; j++)
+		    if(a[j]>highest)
+				highest = a[j];
+		if (highest == -1)
+		{
+			System.out.println("The Array is empty");
+			return highest;
+		}
+		else{
+			delete(highest);
+			System.out.println("Deleted the highest number: " + highest);
+			return highest;
+		}
+		
 	}
 
 	public boolean find(long searchKey)
@@ -98,6 +117,9 @@ public class Main
 		arr.delete(55);
 		arr.delete(99);
 
+		arr.display();
+		arr.removeMax();
+		arr.removeMax();
 		arr.display();
 	}
 }
