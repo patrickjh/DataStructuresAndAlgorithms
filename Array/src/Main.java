@@ -88,9 +88,12 @@ public class Main
 		System.out.println("Hello World!");
 		int maxSize = 100;
 		Array arr;
+		Array arr2;
+		int j;
 		arr = new Array(maxSize);
-
-		arr.getMax();
+		arr2 = new Array(maxSize);
+		
+		System.out.println("The Maximum is " + arr.getMax());
 
 		arr.insert(77);
 		arr.insert(99);
@@ -105,21 +108,29 @@ public class Main
 		
 		arr.display();
 
-		arr.getMax();
+		System.out.println("The Maximum is " + arr.getMax());
+
+		System.out.println("Creating new ordered array");
+
+		while(arr.getMax()!= -1)
+			arr2.insert(arr.removeMax());
+
+		System.out.println(" Created new array ");
+		arr2.display();
 
 		int searchKey = 35;
-		if(arr.find(searchKey))
+		if(arr2.find(searchKey))
 			System.out.println("Found " + searchKey);
 		else
 			System.out.println(" Can't find " + searchKey);
 
-		arr.delete(00);
-		arr.delete(55);
-		arr.delete(99);
+		arr2.delete(00);
+		arr2.delete(55);
+		arr2.delete(99);
 
-		arr.display();
-		arr.removeMax();
-		arr.removeMax();
-		arr.display();
+		arr2.display();
+		arr2.removeMax();
+		arr2.removeMax();
+		arr2.display();
 	}
 }
