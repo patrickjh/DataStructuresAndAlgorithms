@@ -90,16 +90,39 @@ class OrdArray
 
 	public boolean delete(long value)
 	{
-		int j = find(value);
-		if(j==nElems)
+		int lowerBound = 0;
+		int upperBound = nElems-1;
+		int curIn;
+		int j;
+
+		if (nElems == 0) {
 			return false;
+		}
+
+		while(1 < upperBound - lowerBound) {
+			curIn = (lowerBound + upperBound) / 2;
+			if (value > a[curIn]) {
+				lowerBound = curIn;
+				System.out.println("LowerBound =" + lowerBound);
+			}
+			else {
+				upperBound = curIn;
+				System.out.println("UpperBound =" + upperBound);
+			}
+		}
+		if (value == a[upperBound])
+			j = upperBound ;
+		else if (value == a[lowerBound])
+			j = lowerBound;
 		else
-		{
+			return false;
+		
+
 			for(int k=j; k<nElems; k++)
 				a[k] = a[k+1];
 			nElems--;
 			return true;
-		}
+		
 	}
 
 	public void display()
@@ -150,7 +173,9 @@ public class Main
 		arr.display();
 
 		arr.delete(00);
+		arr.display();
 		arr.delete(55);
+		arr.display();
 		arr.delete(99);
 
 		arr.display();
