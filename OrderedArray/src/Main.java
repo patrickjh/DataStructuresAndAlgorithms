@@ -9,6 +9,9 @@ class OrdArray
 		nElems = 0;
 	}
 
+	public int size()
+	{ return nElems; }
+
 	public int find(long searchKey)
 	{
 		int lowerBound = 0;
