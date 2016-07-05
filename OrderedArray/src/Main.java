@@ -132,6 +132,34 @@ class OrdArray
 		System.out.println("");
 
 	}
+	
+	public OrdArray merge(OrdArray array1, OrdArray array2) {
+		OrdArray returnedArray = new OrdArray(array1.size() + array2.size());
+		int j = 0;
+		int k = 0;
+		
+		while(j < array1.size() || k < array2.size())
+			if (array1.a[j] < array2.a[k]) {
+				returnedArray.insert(array1.a[j]);
+				j++;
+			}
+			else {
+				returnedArray.insert(array2.a[k]);
+				k++;
+			}
+				
+		if(j < array1.size()){
+			for(; j < array1.size(); j++)
+				returnedArray.insert(array1.a[j]);
+			}
+		else
+			for(; k < array2.size(); k++)
+				returnedArray.insert(array2.a[j]);
+		
+		
+		
+		return returnedArray;
+	}
 }
 
 public class Main
@@ -179,5 +207,8 @@ public class Main
 		arr.delete(99);
 
 		arr.display();
+		
+		
+		
 	}
 }
