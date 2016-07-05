@@ -1,20 +1,106 @@
-import java.util.*;
+class OrdArray
+{
+	private long[] a;
+	private int nElems;
+
+	public OrdArray(int max)
+	{
+		a = new long[max];
+		nElems = 0;
+	}
+
+	public int find(long searchKey)
+	{
+		int lowerBound = 0;
+		int upperBound = nElems-1;
+		int curIn;
+	
+
+		while(true)
+		{
+			curIn = (lowerBound + upperBound) / 2;
+			if(a[curIn] == searchKey)
+				return curIn;
+			else if(lowerBound > upperBound)
+				return nElems;
+			else
+				{
+				if(a[curIn] < searchKey)
+					lowerBound = curIn + 1;
+				else
+					upperBound = curIn - 1;
+				}
+		}
+	}
+
+	public void insert(long value)
+	{
+		int j;
+		for(j=0; j<nElems; j++)
+			if(a[j] > value)
+				break;
+		for(int k=nElems; k>j; k--)
+			a[k] = a[k-1];
+		a[j] = value;
+		nElems++;
+
+	}
+
+	public boolean delete(long value)
+	{
+		int j = find(value);
+		if(j==nElems)
+			return false;
+		else
+		{
+			for(int k=j; k<nElems; k++)
+				a[k] = a[k+1];
+			nElems--;
+			return true;
+		}
+	}
+
+	public void display()
+	{
+		for(int j=0; j<nElems; j++)
+			System.out.print(a[j] + " ");
+		System.out.println("");
+
+	}
+}
 
 public class Main
 {
 	public static void main(String[] args)
 	{
 		System.out.println("Hello World!");
+		int maxSize = 100;
+		OrdArray arr;
+		arr = new OrdArray(maxSize);
 
-		Scanner input = new Scanner(System.in);
+		arr.insert(77);
+		arr.insert(99);
+		arr.insert(44);
+		arr.insert(55);
+		arr.insert(22);
+		arr.insert(88);
+		arr.insert(11);
+		arr.insert(00);
+		arr.insert(66);
+		arr.insert(33);
 
-		System.out.print("Enter a number: ");
-		double number1 = input.nextDouble();
+		int searchKey = 55;
+		if( arr.find(searchKey) != arr.size())
+			System.out.println("Found " + searchKey);
+		else
+			System.out.println("Can't find " + searchKey);
 
-		System.out.print("Enter second number: ");
-		double number2 = input.nextDouble();
+		arr.display();
 
-		double product = number1 * number2;
-		System.out.printf("The product of both numbers is: %f", product);
+		arr.delete(00);
+		arr.delete(55);
+		arr.delete(99);
+
+		arr.display();
 	}
 }
