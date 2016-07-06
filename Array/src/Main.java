@@ -75,11 +75,24 @@ class Array
 			}
 	}
 	public void display()
-		{
-			for(int j=0; j<nElems; j++)
-					System.out.print(a[j] + " ");
-			System.out.println(" ");
-		}
+	{
+		for(int j=0; j<nElems; j++)
+			System.out.print(a[j] + " ");
+		System.out.println(" ");
+	}
+
+	public void noDups() {
+		int j = 0;
+		int k = 0;
+		
+		for(j=0;j<nElems -1;j++)
+			for(k=j;k<nElems;k++)
+				if(a[j] == a[k]){
+					System.out.println("Deleting " + a[k]);
+					delete(a[k]);
+					}
+		return;
+	}
 }
 public class Main
 {
@@ -131,6 +144,23 @@ public class Main
 		arr2.display();
 		arr2.removeMax();
 		arr2.removeMax();
-		arr2.display();
+		arr2.display(); 
+		
+		Array arr3 = new Array(100);
+		
+		arr3.display();
+		arr3.insert(5);
+		arr3.insert(5);
+		arr3.insert(5);
+		arr3.insert(5);
+		arr3.insert(3);
+		arr3.insert(3);
+		arr3.insert(3);
+		arr3.insert(3);
+		arr3.insert(31);
+		arr3.insert(35);
+		arr3.display();
+		arr3.noDups();
+		arr3.display();
 	}
 }
