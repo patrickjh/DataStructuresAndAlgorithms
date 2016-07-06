@@ -138,27 +138,20 @@ class OrdArray
 		int j = 0;
 		int k = 0;
 		
-		while(j < array1.size() || k < array2.size())
-			if (array1.a[j] < array2.a[k]) {
+		do 
+			if ((array1.a[j] < array2.a[k]) && (j<array1.size())) {
 				returnedArray.insert(array1.a[j]);
 				j++;
-			}
+					}
 			else {
 				returnedArray.insert(array2.a[k]);
-				k++;
+				if(k < array2.size())
+					k++;
 			}
-				
-		if(j < array1.size()){
-			for(; j < array1.size(); j++)
-				returnedArray.insert(array1.a[j]);
-			}
-		else
-			for(; k < array2.size(); k++)
-				returnedArray.insert(array2.a[j]);
-		
-		
+		while( returnedArray.size() < (array1.size() + array2.size()));
 		
 		return returnedArray;
+		
 	}
 }
 
@@ -208,7 +201,38 @@ public class Main
 
 		arr.display();
 		
+		OrdArray firstArray = new OrdArray(100);
+		OrdArray secondArray = new OrdArray(100);
 		
+		firstArray.insert(2);
+		firstArray.insert(5);
+		firstArray.insert(9);
+		firstArray.insert(3);
+		firstArray.insert(14);
+		firstArray.insert(25);
+		firstArray.insert(60);
+		firstArray.insert(31);
+		firstArray.insert(70);
+		firstArray.insert(10);
 		
+		System.out.println("first array");
+		firstArray.display();
+		
+		secondArray.insert(7);
+		secondArray.insert(19);
+		secondArray.insert(81);
+		secondArray.insert(35);
+		secondArray.insert(62);
+		secondArray.insert(49);
+		secondArray.insert(51);
+		secondArray.insert(45);
+		secondArray.insert(13);
+		secondArray.insert(6);
+		
+		System.out.println("second array");
+		secondArray.display();
+		
+		OrdArray thirdArray = secondArray.merge(firstArray, secondArray);
+		thirdArray.display();
 	}
 }
