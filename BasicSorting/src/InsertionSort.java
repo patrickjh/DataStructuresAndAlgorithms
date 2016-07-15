@@ -20,16 +20,29 @@ class ArrayIns {
 
 	public void insertionSort() {
 		int in, out;
+		int copy = 0;
+		int comparisons = 0;
 
 		for(out=1; out<nElems; out++) {
 			long temp = a[out];
+			copy++;
 			in = out;
 			while(in>0 && a[in-1] >= temp) {
 				a[in] = a[in-1];
+				copy++;
 				--in;
+				comparisons++;
 			}
 			a[in] = temp;
+			copy++;
 		}
+		System.out.println("Copies: " + copy + " / Comparisons: " + comparisons);
+		/* Challenge 3.5 -modify this so it counts the number of copies and comparisons
+			Display total at the end.
+			Make two integers to hold the number - comparison and copy
+			EFind the right place to put this into the code to run each time.
+
+		*/
 	}
 
 	public long median() {
