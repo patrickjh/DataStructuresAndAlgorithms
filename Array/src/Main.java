@@ -1,3 +1,5 @@
+package DataStructuresAndAlgorithms.Array.src;
+
 class Array
 {
 	private long[] a;
@@ -102,7 +104,6 @@ public class Main
 		int maxSize = 100;
 		Array arr;
 		Array arr2;
-		int j;
 		arr = new Array(maxSize);
 		arr2 = new Array(maxSize);
 		

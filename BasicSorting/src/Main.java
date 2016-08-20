@@ -1,3 +1,5 @@
+package DataStructuresAndAlgorithms.BasicSorting.src;
+
 import java.util.*;
 
 public class Main
@@ -16,5 +18,7 @@ public class Main
 
 		double product = number1 * number2;
 		System.out.printf("The product of both numbers is: %f", product);
+		
+		input.close();
 	}
 }
