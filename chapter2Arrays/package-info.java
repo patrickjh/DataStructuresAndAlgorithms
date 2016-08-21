@@ -5,4 +5,4 @@
  * @author patrick
  *
  */
-package DataStructuresAndAlgorithms.chapter2Arrays;
+package dataStructuresAndAlgorithms.chapter2Arrays;

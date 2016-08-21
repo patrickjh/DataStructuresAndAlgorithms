@@ -1,4 +1,4 @@
-package DataStructuresAndAlgorithms.chapter2Arrays;
+package dataStructuresAndAlgorithms.chapter2Arrays;
 
 class OrdArray {
 	private long[] a;

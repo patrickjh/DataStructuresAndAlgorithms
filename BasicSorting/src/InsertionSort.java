@@ -1,4 +1,4 @@
-package DataStructuresAndAlgorithms.BasicSorting.src;
+package dataStructuresAndAlgorithms.BasicSorting.src;
 
 class ArrayIns {
 	private long[] a;
