@@ -1,4 +1,4 @@
-package dataStructuresAndAlgorithms.OrderedArray.src;
+package dataStructuresAndAlgorithms.old.OrderedArray.src;
 
 class OrdArray
 {

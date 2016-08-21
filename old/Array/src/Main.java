@@ -1,4 +1,4 @@
-package dataStructuresAndAlgorithms.Array.src;
+package dataStructuresAndAlgorithms.old.Array.src;
 
 class Array
 {

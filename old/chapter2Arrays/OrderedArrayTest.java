@@ -1,4 +1,4 @@
-package dataStructuresAndAlgorithms.chapter2Arrays;
+package dataStructuresAndAlgorithms.old.chapter2Arrays;
 
 import static org.junit.Assert.*;
 

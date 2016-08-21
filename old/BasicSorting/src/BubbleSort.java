@@ -1,4 +1,4 @@
-package dataStructuresAndAlgorithms.BasicSorting.src;
+package dataStructuresAndAlgorithms.old.BasicSorting.src;
 
 class ArrayBub	{
 		private long[] a;
