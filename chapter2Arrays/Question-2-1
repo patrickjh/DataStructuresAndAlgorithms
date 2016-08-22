@@ -1,0 +1,3 @@
+/*
+To the HighArray class in the highArray.java program (Listing 2.3), add a method called getMax( ) that returns the value of the highest key in the array, or -1 if the array is empty. Add some code in main( ) to exercise this method. You can assume all the keys are positive numbers.
+*/
