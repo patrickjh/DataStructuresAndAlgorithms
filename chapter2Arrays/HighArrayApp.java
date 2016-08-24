@@ -11,6 +11,13 @@ class HighArray {
 		nElems = 0;	
 	}
 	
+	public long getAtIndex(int index){
+		if (index < nElems-1 && nElems >0)
+			return a[index];
+		else
+			return -1;
+	}
+	
 	public boolean find(long searchKey) {
 		int j;
 		for(j=0; j<nElems; j++)
