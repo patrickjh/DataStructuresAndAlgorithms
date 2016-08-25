@@ -10,6 +10,6 @@ package dataStructuresAndAlgorithms.chapter3SimpleSorts;
  *(Recall that in a group of numbers half are larger than the median and half are smaller.) 
  *Do it the easy way.
  */
-public class Quesetion_3_2 {
+public class Question_3_2 {
 
 }
