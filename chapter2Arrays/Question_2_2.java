@@ -7,6 +7,19 @@ but also removed from the array.
 Call the method removeMax( ).
 */
 
+class HighArray2_2 extends HighArray2_1{
+	HighArray2_2(int length) {
+		super(length);
+	}
+	
+	public long removeMax() {
+		long max = getMax();
+		delete(max);
+		return max;
+	}
+}
+
+
 public class Question_2_2{
 	
 }

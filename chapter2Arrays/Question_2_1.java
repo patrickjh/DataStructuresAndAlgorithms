@@ -22,6 +22,7 @@ class HighArray2_1 extends HighArray {
 				}
 				i++;
 			}
+			
 			return max;
 		}
 	}

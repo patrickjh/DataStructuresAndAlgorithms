@@ -8,7 +8,7 @@ public class Question_2_1Test {
 
 	@Test
 	public void getMaxReturnsHighestKey() {
-		HighArray2_1 arr = new HighArray2_1(10);
+		HighArray2_1 arr = new HighArray2_1(50);
 		arr.insert(77);
 		arr.insert(99);
 		arr.insert(44);
