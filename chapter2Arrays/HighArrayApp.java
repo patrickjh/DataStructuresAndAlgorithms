@@ -12,7 +12,7 @@ class HighArray {
 	}
 	
 	public long getAtIndex(int index){
-		if (index < nElems-1 && nElems >0)
+		if (index <= nElems-1 && nElems >0)
 			return a[index];
 		else
 			return -1;

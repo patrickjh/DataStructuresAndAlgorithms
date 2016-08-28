@@ -44,10 +44,11 @@ public class Question_2_2Test {
 		arr.insert(33);
 		arr.insert(44);
 		arr.insert(55);
-		arr.insert(99);
+		
 		arr.insert(66);
 		arr.insert(77);
 		arr.insert(88);
+		arr.insert(99);
 
 		long remove = arr.removeMax();
 		
