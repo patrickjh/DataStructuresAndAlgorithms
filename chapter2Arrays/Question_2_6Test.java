@@ -2,7 +2,7 @@ package dataStructuresAndAlgorithms.chapter2Arrays;
 
 import static org.junit.Assert.*;
 
-import org.junit.Assert;
+//import org.junit.Assert;
 import org.junit.Test;
 
 public class Question_2_6Test {
