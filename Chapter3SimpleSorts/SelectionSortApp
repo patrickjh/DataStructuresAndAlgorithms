@@ -1,0 +1,3 @@
+/* implements selection sort, 
+which has few swaps. Runs in
+N2 time. 

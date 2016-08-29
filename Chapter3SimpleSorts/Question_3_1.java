@@ -13,5 +13,24 @@ package dataStructuresAndAlgorithms.chapter3SimpleSorts;
  *You'll need two outer indexes, one on the right (the old out) and another on the left.
  */
 public class Question_3_1 {
-
+/*
+We will need two indexes, one for the bottom, one for the top
+on each big loop, they will move towards the middle.
+we will need two inner loops
+	first loop moves left to right,
+		it checks if the left one is bigger 
+		than the right one and swaps until it 
+		reaches right index
+	second loop moves right to left.
+		it checks if right one is smaller than 
+		left one and swaps if they are.
+	big loop keeps going until these meet in the middle
+	have a left index and a right index that each loop moves.
+	have it inside a while loop which checks if 
+	left index and right index are equal
+	
+	test case checks if a ten item array gets sorted or not.
+	it uses an array comparison.
+	
+*/
 }
