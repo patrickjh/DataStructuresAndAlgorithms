@@ -8,7 +8,8 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({ 
 	Question_2_1Test.class, 
 	Question_2_2Test.class,
-	Question_2_4Test.class
+	Question_2_4Test.class,
+	Question_2_6Test.class
 	})
 
 //Class stays empty - just a place holder

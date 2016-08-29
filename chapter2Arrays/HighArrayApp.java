@@ -3,8 +3,8 @@ package dataStructuresAndAlgorithms.chapter2Arrays;
 /* Uses better encapsulation and interface around the array. Trades out get and set for insert, find, delete, display*/
 
 class HighArray {
-	private long[] a;
-	private int nElems;
+	protected long[] a;
+	protected int nElems;
 	
 	public HighArray(int max) {
 		a = new long[max];
