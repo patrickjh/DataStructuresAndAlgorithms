@@ -14,6 +14,28 @@ package dataStructuresAndAlgorithms.chapter3SimpleSorts;
  *In your algorithm, make sure no item is moved more than once, no matter how many duplicates there are. 
  *This will give you an algorithm with O(N) time.
  */
+ 
+ /*
+ thoughts on how to solve:
+
+ first call insertion sort to check if its sorted or not.
+ 
+ Go through the array with a temporary value current.
+ and a temporary value called insertionPoint
+ if the array item equals current, do nothing.
+ if it doesnt, 
+ 	set current to that item
+	put that item at array[insertionPoint]
+	increment insertionPoint
+ since array is sorted, each item should 
+ show up once in order then not again.
+ stop when current equals array[nElems]
+ truncate any of the array left after the insertion point 
+ so the array length = insertion point.
+ set nelems = insertion point
+ return
+ 
+ */
 public class Question_3_3 {
 
 }
