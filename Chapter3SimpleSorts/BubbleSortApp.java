@@ -24,8 +24,8 @@ public class BubbleSortApp {
 }
 
 class ArrayBub {
-	private long[] a;
-	private int nElems;
+	protected long[] a;
+	protected int nElems;
 	
 	public ArrayBub(int max) {
 		a = new long[max];
@@ -57,7 +57,7 @@ class ArrayBub {
 		}
 	}
 	
-	private void swap(int one, int two) {
+	protected void swap(int one, int two) {
 		long temp = a[one];
 		a[one] = a[two];
 		a[two] = temp;

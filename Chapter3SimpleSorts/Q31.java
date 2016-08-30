@@ -4,7 +4,7 @@
 package dataStructuresAndAlgorithms.chapter3SimpleSorts;
 
 /**
- * @author patrick
+ * @author Patrick
  *3.1 In the bubbleSort.java program (Listing 3.1) and the BubbleSort Workshop applet, 
  *the index always goes from left to right, finding the largest item and carrying it toward out on the right. 
  *Modify the bubbleSort( ) method so that it's bidirectional. 
@@ -12,7 +12,7 @@ package dataStructuresAndAlgorithms.chapter3SimpleSorts;
  *but when it reaches out, it will reverse and carry the smallest item from right to left. 
  *You'll need two outer indexes, one on the right (the old out) and another on the left.
  */
-public class Question_3_1 {
+
 /*
 We will need two indexes, one for the bottom, one for the top
 on each big loop, they will move towards the middle.
@@ -33,4 +33,31 @@ we will need two inner loops
 	it uses an array comparison.
 	
 */
+public class Q31 extends ArrayBub{
+	public Q31(int max) {
+		super(max);
+	}
+	
+	public void bubbleSort() {
+		int leftIndex = 0;
+		int rightIndex = this.nElems -1;
+		
+		while(leftIndex < rightIndex) {
+			for(int i=leftIndex; i<rightIndex; i++){
+				if(this.a[i] > this.a[i+1]) {
+					swap(i, i+1);
+				}
+			}
+			rightIndex--;
+			for(int i=rightIndex; i > leftIndex; i--) {
+				if(this.a[i] < this.a[i-1]) {
+					swap(i, i-1);
+				}
+			}
+			leftIndex++;
+		}
+		
+	}
+	
+
 }
