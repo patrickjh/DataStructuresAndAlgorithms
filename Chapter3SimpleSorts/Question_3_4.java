@@ -16,6 +16,22 @@ package dataStructuresAndAlgorithms.chapter3SimpleSorts;
  *Because the odd pairs are independent of each other, each pair can be checked—and swapped, if necessary—by a different processor. 
  *This makes for a very fast sort.
 */
+
+
+/*
+Thoughts on how to solve this
+	inside a do while loop
+	define boolean swaps to false
+	do two for loops. one for odds, one for even
+		first do a loop which compares j and j+1 and 
+		calls swap if left one is larger and sets swaps to true
+		next do a loop with j+1 and j+2,
+		if left one is larger, call swap, set swap to true
+	while loop ends when no swaps are done
+		i.e. swaps = false after inner loops
+
+
+*/
 public class Question_3_4 {
 
 }

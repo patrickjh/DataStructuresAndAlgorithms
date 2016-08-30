@@ -1,0 +1,10 @@
+/* 
+Example of bubble sort, a simple but inefficient sort.
+Don't use bubble sort
+*/
+
+public class BubbleSortApp {
+	public static void main(String[] Args){
+		System.out.println("Hello World!");
+	}
+}
