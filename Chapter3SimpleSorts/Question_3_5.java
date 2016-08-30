@@ -13,6 +13,18 @@ package dataStructuresAndAlgorithms.chapter3SimpleSorts;
  *Do the same for almost-sorted data (only a few items out of place). 
  *What can you deduce about the efficiency of this algorithm for almost-sorted data?
  */
+ 
+ /*
+ thoughts on how to solve this.
+ 
+ i need to look at how the insertion sort program works
+ probably just need two int counters:
+ 	int copies
+	int comparisons
+and increment them at the appropriate times.
+at the end, print those variables with some explanation.
+then test them out.
+ */
 public class Question_3_5 {
 
 }
