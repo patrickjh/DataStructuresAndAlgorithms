@@ -26,8 +26,8 @@ public class InsertSortApp {
 }
 
 class ArrayIns {
-	private long[] a;
-	private int nElems;
+	protected long[] a;
+	protected int nElems;
 	
 	public ArrayIns(int max) {
 		a = new long[max];

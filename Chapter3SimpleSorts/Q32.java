@@ -26,6 +26,24 @@ package dataStructuresAndAlgorithms.chapter3SimpleSorts;
 test case: have a 10 item array. check if median is 
 what i think it should be.
  */
-public class Question_3_2 {
+public class Q32 extends ArrayIns {
+	public Q32(int max) {
+		super(max);
+	}
+	
+	public long median() {
+		this.insertionSort();
+		long median = 0;
+		int midpoint = (nElems-1)/2;
+		
+		//if array is even length
+		if(nElems%2 == 0) {
+			median = ( (a[midpoint] + a[midpoint +1])    / 2);
+		} else{
+		//if array is odd length	
+			median = a[midpoint];
+		}
+		return median;
+	}
 
 }

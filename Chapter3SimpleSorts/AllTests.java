@@ -6,7 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ Q31Test.class, 
-				Question_3_2Test.class, 
+				Q32Test.class, 
 				Question_3_3Test.class, 
 				Question_3_4Test.class,
 				Question_3_5Test.class, 
